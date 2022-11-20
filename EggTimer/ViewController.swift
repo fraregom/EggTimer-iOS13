@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
         
-    let eggTimes = ["Soft": 1, "Medium": 3, "Hard": 4]
+    let eggTimes = ["Soft": 3, "Medium": 5, "Hard": 7]
     @IBOutlet weak var titleEggTimer: UILabel!
     @IBOutlet weak var barProgress: UIProgressView!
     var timer = Timer()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     func timer(time: Int){
         timer.invalidate()
         barProgress.progress = 0.0
-        let timeTarget: Int = time * 30
+        let timeTarget: Int = time * 60
         var secondsPassed: Int = 0
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
